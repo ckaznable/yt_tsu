@@ -2,6 +2,13 @@
 name = "yt_tsu"
 version = "0.1.0"
 edition = "2021"
+authors = ["CK Aznable"]
+description = "Youtube TS file util"
+homepage = "https://github.com/ckaznable/yt_tsu"
+repository = "https://github.com/ckaznable/yt_tsu"
+exclude = [".github/"]
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 mpeg2ts = "0.2.0"
