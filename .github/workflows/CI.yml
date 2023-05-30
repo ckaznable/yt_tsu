@@ -50,9 +50,6 @@ jobs:
         with:
           toolchain: ${{ matrix.build || 'stable' }}
 
-      - name: Build debug
-        run: cargo build --locked
-
       - name: Test
         run: cargo test --all-features
 
