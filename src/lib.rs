@@ -3,7 +3,7 @@ pub mod audio {
         es::StreamType,
         ts::{ReadTsPacket, TsPacketReader, TsPayload},
     };
-    use std::{io::Read, fs::File};
+    use std::{fs::File, io::Read};
 
     pub fn from_file_path<S: AsRef<str>>(path: S) -> Vec<u8> {
         let file = File::open(path.as_ref()).unwrap();
@@ -68,8 +68,8 @@ pub mod audio {
 
 #[cfg(test)]
 mod tests {
+    use crate::audio::{from_file, from_file_path, from_raw};
     use std::{fs::File, io::Read};
-    use crate::audio::{from_raw, from_file, from_file_path};
 
     fn get_file() -> Result<File, std::io::Error> {
         File::open("tests/test.ts")
