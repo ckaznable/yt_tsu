@@ -36,7 +36,7 @@ pub mod audio {
                         match payload {
                             Pmt(pmt) => {
                                 if let Some(el) = pmt
-                                    .table
+                                    .es_info
                                     .into_iter()
                                     .find(|el| el.stream_type == StreamType::AdtsAac)
                                 {
